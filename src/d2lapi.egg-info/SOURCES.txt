@@ -1,0 +1,54 @@
+.DS_Store
+.gitignore
+D2L_Data_Converter.png
+INSTALL.md
+LICENSE
+README.md
+TestGUI.py
+environment.yml
+pyproject.toml
+setup.cfg
+setup.py
+.idea/.gitignore
+.idea/csv-plugin.xml
+.idea/d2l-instructor-api.iml
+.idea/misc.xml
+.idea/modules.xml
+.idea/vcs.xml
+.idea/inspectionProfiles/Project_Default.xml
+.idea/inspectionProfiles/profiles_settings.xml
+DataFiles/ExampleData_AnswerKey.csv
+DataFiles/ExampleData_QuizAttemptDetails.csv
+DataFiles/ExampleData_Survey.csv
+DataFiles/FigureReproducibilityExampleData_AnswerKey.csv
+DataFiles/FigureReproducibilityExampleData_QuizAttemptDetails.csv
+DataFiles/Final Quiz - Attempt Details.csv
+DataFiles/Final Quiz - Question Details.csv
+DataFiles/Final_Survey_-_Individual_Attempts__2___1_.csv
+DataFiles/Pre-Physics Quiz  - Attempt Details.csv
+Examples/.gitkeep
+Examples/UsageExamples.ipynb
+Figures/.gitkeep
+Figures/Bar_Visualization.ipynb
+GUI/WidgetGUI/.gitkeep
+GUI/WidgetGUI/README.md
+GUI/WidgetGUI/Widget-Based_GUI.ipynb
+GUI/WidgetGUI/Widget-Based_GUI_WithLabelKeys.ipynb
+Reports/CONDA_INSTALLATION.md
+Reports/Instruction of import functions.md
+Reports/UsageRequirementsLimitations.md
+src/.DS_Store
+src/Widget-Based_GUI_WithLabelKeys.ipynb
+src/d2lapi/D2L_Widgets.py
+src/d2lapi/Final_Quiz.py
+src/d2lapi/Final_Survey.py
+src/d2lapi/Visualization_Bar.py
+src/d2lapi/__init__.py
+src/d2lapi.egg-info/PKG-INFO
+src/d2lapi.egg-info/SOURCES.txt
+src/d2lapi.egg-info/dependency_links.txt
+src/d2lapi.egg-info/top_level.txt
+src/test/.gitkeep
+src/test/__init__.py
+src/test/test_cases_quiz.py
+src/test/test_cases_survey.py

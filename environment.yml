@@ -11,3 +11,5 @@ dependencies:
   - ipywidgets
   - io
   - IPython.display
+  - sys
+  - os

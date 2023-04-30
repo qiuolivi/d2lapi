@@ -46,6 +46,8 @@ Then
 
 *The pre-requisite for all D2L related tutorials is that you have certain administrative roles. (At least course editor). You can check your role on the class list section of D2L. 
 
+Click [this link](https://mediaspace.msu.edu/media/Getting+D2L+Data+Output+Tutorial/1_i9pbey6y) for a video tutorial about getting data from D2L. 
+
 ## Getting the quiz attempt csv from D2L: 
 
 1. Login to D2L and go to course page  
@@ -109,3 +111,7 @@ To try out the API, without exporting data from D2L, we have provided example da
 1. Navigate to the Jupyter Notebook you’d like to run. 
 
 2. Replace the name of the .csv files needed in code with your example files. Files with “Attempt Details” in the name should be replaced with 'ExampleData_QuizAttemptDetails.csv'. Files with “Question Details” in the name should be replaced with “'ExampleData_AnswerKey.csv', and survey related data should be replaces with 'ExampleData_Survey.csv'. You can also use the provided widgets to help you bring in example data.
+
+## Inputs and Outputs
+
+Information on inputs and outputs of the software can be found in the 'UsageRequirementsLimitations.md' file under the 'Reports' directory, as well as function definitions, and instructions included in the various GUIs or usage examples. 

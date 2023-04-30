@@ -20,14 +20,23 @@ General usage requirements of this software.
 
 - **Optional - Jupyter**: For easier usage, it is possible to simply run a jupyter notebook that has an interactable interface. Follow anaconda installation instructions for more details.
 
+### Outputs
+
+The inputs for each process were discussed in the above requirements section. If using the main functionality for our software you will receive two outputs. 
+
+**Reformatted Data**: This is the reformatted quiz or survey data with new question and answer labels. 
+
+**Question and Answer Label Key**: This is an additional output that matches the new question and answer labels used in the reformatted data (involves reordering) to the corresponding question and answer text. 
+
+
 ### Limitations
 
 Limitations of the software.
 
-- **Cannot Process Matching Questions for Quiz**: Unfortunately for matching type quiz questions we will not correctly process the data regarding what a student has selected. However, the scoring for the question will be done correctly.
+- **Cannot Process Matching Questions for Quiz**: Unfortunately for matching type quiz questions, we cannot effectively binarize data regarding what a student has selected. This is to technical limitations with the D2L system. However, the data will be outputted as is, and the scoring for this question type will be done correctly. We reccommend avoiding including matching questions that have repeated matches, i.e. one answer that should be matched to multiple options, for better performance. 
 
-- **Temporarily No Library Or GUI**: At the moment, this feature cannot be accessed through methods other than installing ipynb or  py file.
+- **Multiple Attempts on Surveys**: Users should set up their D2L surveys to only allow one attempt. When the same user takes a survey multiple times, D2L attempts to combine data from attempts in ways that can be hard to understand. Thus, we suggest taking measures to limit students to single attempts to ensure optimal performance
 
-
+- **Reordering and Labels**: In order to sucessfully reformat the data, and standardize question / answer order, some reordering is done in the cleaning process. Therefore, the question order as written may not match the final question order. Thus, we provide a key for the new labels to aid users. 
 
 

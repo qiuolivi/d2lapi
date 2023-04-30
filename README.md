@@ -42,6 +42,8 @@ Go to the INSTALL.md for further instructions for the API.
 
 ## Tutorials
 
+Click [this link](https://mediaspace.msu.edu/media/Getting+D2L+Data+Output+Tutorial/1_i9pbey6y) for a video tutorial about getting data from D2L. 
+
 Click [this link](https://mediaspace.msu.edu/media/WidgetBasedGUI_Tutorial/1_2unbogi0) for a video tutorial about using the Widget-Based GUI.
 
-Click [this link](https://mediaspace.msu.edu/media/Getting+D2L+Data+Output+Tutorial/1_i9pbey6y) for a video tutorial about getting data from D2L. 
+Click [this link](https://mediaspace.msu.edu/media/TKinter+GUI+Tutorial/1_cq87zx8m) for a video tutorial =about using the TKinter GUI.

@@ -6,13 +6,26 @@ Please see our 'Reports' directory for conda installation instructions as well a
 
 ## Importing Our Library
 
-Bring our library into your code or notebook by using the command ```from src import``` then type what directories / modules you'd like to use. 
+Bring our library into your code or notebook by using the command ```from src.d2lapi import``` then type what directories / modules you'd like to use. 
 
 The options are as follows:
-1. Final_Quiz: functions to convert quiz data, import using ```from src import Final_Quiz```
-2. Final_Survey: functions to convert survey data, import using ```from src import Final_Survey```
-3. Visualization_Bar: functions to create distribution visualization, import using ```from src import Visualization_Bar```
-4. D2L_Widgets: functions to help with widgets, import using ```from src import D2L_Widgets```
+1. Final_Quiz: functions to convert quiz data, import using ```from src.d2lapi import Final_Quiz```
+2. Final_Survey: functions to convert survey data, import using ```from src.d2lapi import Final_Survey```
+3. Visualization_Bar: functions to create distribution visualization, import using ```from src.d2lapi import Visualization_Bar```
+4. D2L_Widgets: functions to help with widgets, import using ```from src.d2lapi import D2L_Widgets```
+
+
+## Downloading Our PyPi Library
+As an alternative to downloading our entire repository you may also simply type ```pip install d2lapi``` into a terminal and enter.
+
+Bring our library into your code or notebook by using the command ```from d2lapi import``` then type what directories / modules you'd like to use. 
+
+The options are as follows:
+1. Final_Quiz: functions to convert quiz data, import using ```from d2lapi import Final_Quiz```
+2. Final_Survey: functions to convert survey data, import using ```from d2lapi import Final_Survey```
+3. Visualization_Bar: functions to create distribution visualization, import using ```from d2lapi import Visualization_Bar```
+4. D2L_Widgets: functions to help with widgets, import using ```from d2lapi import D2L_Widgets```
+
 
 As a note, every time you use functions from our library, you will have to reference the corresponding directory like so: ```Final_Quiz.completeQuiz()```. 
 The syntax is: ```<module>.<function>```
@@ -111,6 +124,7 @@ To try out the API, without exporting data from D2L, we have provided example da
 1. Navigate to the Jupyter Notebook you’d like to run. 
 
 2. Replace the name of the .csv files needed in code with your example files. Files with “Attempt Details” in the name should be replaced with 'ExampleData_QuizAttemptDetails.csv'. Files with “Question Details” in the name should be replaced with “'ExampleData_AnswerKey.csv', and survey related data should be replaces with 'ExampleData_Survey.csv'. You can also use the provided widgets to help you bring in example data.
+
 
 ## Inputs and Outputs
 

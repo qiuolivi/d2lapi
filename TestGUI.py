@@ -2,7 +2,7 @@ import tkinter as tk
 import pandas as pd
 from tkinter.filedialog import askopenfile, askopenfiles, asksaveasfile
 from tkinter import ttk
-from src import Final_Quiz, Final_Survey
+from src.d2lapi import Final_Quiz, Final_Survey
 #pip install ...
 #from D2L import d2l
 
@@ -10,7 +10,7 @@ root = tk.Tk()
 root.title('D2L Converter')
 
 #include icon for GUI    
-img = tk.Image("photo",file="./D2L_Data_Converter.png")
+img = tk.Image("photo",file="./D2L_Data_Converter_Logo.png")
 root.iconphoto(True, img) # you may also want to try this.
 root.tk.call('wm','iconphoto', root._w, img)
 
@@ -23,7 +23,7 @@ side_note.pack()
 frame = tk.Frame(root)
 frame.pack()
 
-img2 = tk.PhotoImage(file = './D2L_Data_Converter.png')
+img2 = tk.PhotoImage(file = './D2L_Data_Converter_Logo.png')
 img2 = img2.zoom(25)
 img2 = img2.subsample(32)
 label = tk.Label(frame, image = img2)

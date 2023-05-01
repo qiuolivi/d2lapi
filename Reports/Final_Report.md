@@ -14,13 +14,13 @@
 
 ## Abstract
 
-The MSU D2L Instructor API addresses issues with D2L’s quiz and survey data output to provide more useful student performance data to educational researchers and instructors at Michigan State University. Users can access the functionality in three ways: a Python library with functions that convert the data; a Widget-Based GUI, which is an interactive Jupyter Notebook; and the application-like TKinter GUI that completes the process with just the click of a button. Because the data cleaning functionality was fairly intensive, based on direction from our sponsors, our team focused on creating an accessible program that achieved the desired output: clean data. However, we hope that future teams can build on our project, expanding functionality to include more visualizations and automated analysis.  
+The MSU D2L Instructor API addresses issues with D2L’s quiz and survey data output to provide more useful student performance data to educational researchers and instructors at Michigan State University. Users can access the functionality in three ways: a Python library with functions that convert the data; a Widget-Based GUI, which is an interactive Jupyter Notebook; and the application-like Tkinter GUI that completes the process with just the click of a button. Because the data cleaning functionality was fairly intensive, based on direction from our sponsors, our team focused on creating an accessible program that achieved the desired output: clean data. However, we hope that future teams can build on our project, expanding functionality to include more visualizations and automated analysis.  
 &nbsp;
 
 ---
 ## Background and Motivation
-
-![](../../../Downloads/BackgroundandMotivation.png)
+![image](Pictures/InstructorQuestions.png)
+*Figure 1: Some questions instructors might pose in regards to D2L data*
 
 This project is part of Michigan State University's (MSU) capstone course, CMSE495: Experiential Learning in Data Science, which provides data science majors the opportunity to apply their skills in real-world projects. As part of this course, we collaborated on a project sponsored by Michigan State University (MSU) to develop a data cleaning API for the Desire to Learn (D2L) learning management system. The initial goal of this project was to streamline the process of extracting, analyzing, and interpreting student performance data for instructors and researchers, originally through a planned data analysis API. However, in working with our sponsors, we narrowed our focus to the first step in this process: data cleaning.   
 
@@ -46,7 +46,7 @@ To start, we set out to understand D2L from an instructor's perspective. With th
 
 We researched various software packages and theories to help us develop a solution. One of the main tools we used was the Pandas library, which is a powerful Python library for data manipulation and analysis. We used Pandas to transform the original long-format dataset into a wide-format dataset by pivoting the data on specific columns. This allowed us to reorganize the data so that each row represented a single attempt by a user, and each column represented an answer choice for a specific question. 
 
-In the pivoting process, we identified the columns that represented the question IDs, the user IDs, and the selected answer choices. We then used the Pandas pivot_table() function to reorganize the data so that each row represented a single attempt by a user, and each column represented an answer choice for a specific question.This allowed us to convert the original long-format dataset into the desired wide-format dataset. 
+In the pivoting process, we identified the columns that represented the question IDs, the user IDs, and the selected answer choices. We then used the Pandas pivot_table() function to reorganize the data so that each row represented a single attempt by a user, and each column represented an answer choice for a specific question. This allowed us to convert the original long-format dataset into the desired wide-format dataset. 
 
 To address randomization options, we standardized question order in our reformatting process. We provided a key for these new question labels as part of our output to aid users in matching the data to corresponding question and answer text. 
 
@@ -84,27 +84,45 @@ This included merging and splitting columns, converting data types, and aggregat
 
 We developed 3 different ways to access the functionality of our data reformatting: 
 
-PyPI library: Users can access our data reformatting functions through the PyPI library, which can be installed with a simple pip install command. This allows users to easily integrate our functionality into their own Python code. 
+__PyPI library__: Users can access our data reformatting functions through the PyPI library, which can be installed with a simple pip install command. This allows users to easily integrate our functionality into their own Python code. 
+![image](Pictures/pipinstall.png)
+*Figure 2: PyPI library functionality*
 
-Downloadable Jupyter Notebook: We also provide a downloadable Jupyter notebook that includes all our data reformatting functions, along with examples and documentation (in other sections of repository). This allows users to interactively explore the functionality and experiment with different datasets. 
+&nbsp;
 
-Tkinter GUI app: For users who prefer a more visual interface, we developed a Tkinter GUI app that allows them to easily upload a dataset, select the desired formatting options, and view the resulting output. This app is easy to use and requires no programming experience. 
+__Downloadable Jupyter Notebook__: We also provide a downloadable Jupyter notebook that includes all our data reformatting functions, along with examples and documentation (in other sections of repository). This allows users to interactively explore the functionality and experiment with different datasets. 
+![image](Pictures/WidgetGUI.png)
+*Figure 3: Widget-Based GUI functionality*
+&nbsp;
+
+__Tkinter GUI__: For users who prefer a more visual interface, we developed a Tkinter GUI app that allows them to easily upload a dataset, select the desired formatting options, and view the resulting output. This app is easy to use and requires no programming experience. 
+![image](Pictures/TKinterGUI.png)
+*Figure 4: Tkinter GUI functionality*
+&nbsp;
 
  
 
 #### Before and After Figures: 
 
-Figure 1 shows a sample of the original dataset before reformatting. The dataset contains a row for each student for each question for each answer choice. In other words, for each question, a student will have as many rows as there are answer options with a column for “checked” or “unchecked” indicating which choices they chose.   For instance, for this example, for a quiz with two questions with four answer choices each, each student will have at least 8 rows of data. The output also contains information like the question number, and question type, where MC is multiple choice and M-S is multi-select, answer choices, and score. This data format would be considered more of a long data format and is not compatible with research applications 
+Figure 5 shows a sample of the original dataset before reformatting. The dataset contains a row for each student for each question for each answer choice. In other words, for each question, a student will have as many rows as there are answer options with a column for “checked” or “unchecked” indicating which choices they chose.   For instance, for this example, for a quiz with two questions with four answer choices each, each student will have at least 8 rows of data. The output also contains information like the question number, and question type, where MC is multiple choice and M-S is multi-select, answer choices, and score. This data format would be considered more of a long data format and is not compatible with research applications 
 
-Figure 2 shows the same sample dataset after reformatting. The data is now in a wider data format. One row for each student and a column for each answer choice for each question.  
+![image](Pictures/OriginalDataset.png)
+*Figure 5: Original Dataset*
 
- 
+Figure 6 shows the same sample dataset after reformatting. The data is now in a wider data format. One row for each student and a column for each answer choice for each question.  
+
+![image](Pictures/PostProcessingDataset.png)
+*Figure 6: Post-Processing Dataset*
 
 #### Summary Figures: 
 
-Figure 3 shows the general process of using our data reformatting functionality. Users first need to download the data they wish to reformat from D2L. Then they can access the functionality through the PyPI library, Jupyter Notebook, or Tkinter GUI app. They then need to follow the tutorial on how to use each one. The resulting output is then in a more usable format for analysis. 
 
- 
+Figure 7 shows the general process of using our data reformatting functionality. Users first need to download the data they wish to reformat from D2L. Then they can access the functionality through the PyPI library, Jupyter Notebook, or Tkinter GUI app. They then need to follow the tutorial on how to use each one. The resulting output is then in a more usable format for analysis. 
+
+![image](Pictures/UseFlowchart.png)
+*Figure 7: Instructional Use*
+
+### Limitations and Summary of Results
 
 There are still some outstanding limitations to our functionality. However, these are primarily due to issues with D2L’s system. We worked with our instructors and sponsors to communicate and navigate these limitations to provide the best performance despite them.  These limitations are also detailed in the documentation accompanying our repository. The two major limitations deal with matching questions and multiple survey attempts. For matching questions for quizzes, D2L does not output all necessary information to binarize matching questions without losing meaning. This is especially problematic when each correct match is not made up of two distinct options. In other words, questions where one choice should be matched to multiple different options. For these questions, we decided to output the data as is from the original output. This solution still works within the framework of our newly formatted data. We hope that this could be improved in future versions once D2L patches this issue. For surveys, D2L’s system does not intuitively handle multiple attempts as it does for quizzes. When the same user takes a survey multiple times, D2L attempts to combine data from attempts in ways that can be difficult to understand and interpret. We navigated this issue by suggesting to users that they take measures to limit students to single attempts to ensure optimal performance. This issue seemed more like an edge case that would not affect typical use of the product.  
 
@@ -128,19 +146,14 @@ The first interface that we built was the d2lapi python module. Using PyPI we re
 
  
 
-A more engaging interface that requires mid-low technical knowledge is our Widget-Based GUI. Using ipywidgets, we’ve created an interactive Jupyter Notebook that guides the user through the data conversion process with minimal to no coding required for the user. They have to enter their desired file names, upload their data files, and press a button to reformat their data. This is a great option for users who enjoy using Jupyter Notebooks and may want to continue with their own manipulation and analysis of the reformatted data in the notebook once the data cleaning process is completed.  
+A more engaging interface that requires mid-low technical knowledge is our Widget-Based GUI. Using IPyWidgets, we’ve created an interactive Jupyter Notebook that guides the user through the data conversion process with minimal to no coding required for the user. They have to enter their desired file names, upload their data files, and press a button to reformat their data. This is a great option for users who enjoy using Jupyter Notebooks and may want to continue with their own manipulation and analysis of the reformatted data in the notebook once the data cleaning process is completed.  
 
  
 
-The final interface is the TkInter button GUI that requires low technical knowledge as reformatting the data can be done with a few clicks of a button. Upon opening the interface, the user is shown a quiz tab and a survey tab. Depending on the type of data the user is dealing with, they will need to click on the ‘Select Survey/Quiz data file” button to provide the interface with the original data from D2L. Once selected the program will save the reformatted data file, as well as a Question/Answer Label key, to the user’s desired location.   
+The final interface is the Tkinter button GUI that requires low technical knowledge as reformatting the data can be done with a few clicks of a button. Upon opening the interface, the user is shown a quiz tab and a survey tab. Depending on the type of data the user is dealing with, they will need to click on the ‘Select Survey/Quiz data file” button to provide the interface with the original data from D2L. Once selected the program will save the reformatted data file, as well as a Question/Answer Label key, to the user’s desired location.   
 
  
-
-For future work, there are some improvements that could be made with the D2L instructor API project. Improvements include making the TkInter button GUI from the repository (TestGUI.py) an accessible application on Mac and Windows platforms, working with D2L to handle the case in which a student takes a survey more than once, and improving the efficiency of our code. We felt that having the GUI converted into an application would appeal to users, as it would require only for the application to be installed on their local system before being able to reformat the D2L quiz and survey data. There was also a consensus that the GUI could be improved on its appearance from something basic to something a bit more professional. In terms of working with D2L, we felt that improvements could be made on the website for issues of dealing with multiple survey attempts from users, as well as finding the necessary .csv files from D2L. To elaborate, the way survey data was dealt with required additional information that D2L does not provide. Due to this reason, the current system accumulates the frequency of Checked and Unchecked answers for students who took a survey more than once. Another issue within D2L is the difficulty of finding the necessary files for reformatting the data. Although we have provided instructions on where these files can be found, if D2L provided the files relating to the quiz or survey in one location, that would drastically improve the accessibility for researchers and instructors.  
-
- 
-
-Finally, we felt that some similar future work could be done is to provide statistical analysis of the data we have collected. Future capstone students may build on our data-cleaning work with D2L quizzes to automate data analysis and provide more advanced statistical analysis of quiz data. Students would help instructors and researchers by exploring which analysis techniques can be generalized and automated and see what visualizations will be most helpful to researchers and instructors.  
+We hope that this is a first step into empowering the education community at MSU to effectively use D2L data. Future teams should be able to build off of our product, improving it, and expanding functionality. Regarding improvements to the current product, ideas include making the Tkinter button GUI from the repository (TestGUI.py) an accessible application on Mac and Windows platforms, working with D2L to fix issues with matching, working with D2L to handle the case in which a student takes a survey more than once, and improving the efficiency of our code. We felt that having the GUI converted into an application would appeal to users, as it would require only for the application to be installed on their local system before being able to reformat the D2L quiz and survey data. There was also a consensus that the GUI could be improved on in its appearance from something basic to something a bit more professional. In terms of working with D2L, we felt that improvements could be made on their side for dealing with multiple survey attempts from users, as well as finding the necessary .csv files from D2L. To elaborate, the way survey data was dealt with required additional information that D2L does not provide. Due to this reason, the current system accumulates the frequency of Checked and Unchecked answers for students who took a survey more than once. Another issue within D2L is the difficulty of finding the necessary files for reformatting the data. Although we have provided instructions on where these files can be found, if D2L provided the files relating to the quiz or survey in one location, that would drastically improve the accessibility for researchers and instructors. Regarding expanded functionality, the data cleaning is just the first step to effectively using D2L data to improve instruction. The next steps in using this data may include data exploration, visualization, and analysis, all of which could be worked on by future teams. Future capstone students may build on our data-cleaning work with D2L quizzes to automate data analysis and provide more advanced statistical analysis of quiz data. Students would help instructors and researchers by exploring which analysis techniques can be generalized and automated and see what visualizations will be most helpful to researchers and instructors. This could even take the form of an interactive dashboard that would take data from D2L, clean it, analyze and visualize the data, and display the findings, allowing instructors to intuitively explore their student performance data. We are excited to see what direction future teams will take this work and how it will benefit our educational community. 
 
 &nbsp;
 
@@ -170,7 +183,7 @@ We would like to acknowledge the python libraries we used extensively throughout
 | Package    | Documentation|
 | ----------- | ----------- |
 | IPyWidgets  | [IPyWidget Documentation](https://ipywidgets.readthedocs.io/en/stable/)   |
-|  TKinter  | [TKinter Documentation](https://docs.python.org/3/library/tkinter.html  )  |
+|  Tkinter  | [Tkinter Documentation](https://docs.python.org/3/library/tkinter.html  )  |
 |  Pandas | [Pandas Documentation](https://pandas.pydata.org/docs/ )|
 |  Numpy   | [Numpy Documentation](https://numpy.org/doc/ ) |
 |  Matplotlib  | [Matplotlib Documentation](https://matplotlib.org/stable/index.html )|

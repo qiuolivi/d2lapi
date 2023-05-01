@@ -6,7 +6,7 @@ Please see our 'Reports' directory for conda installation instructions as well a
 
 ## Importing Our Library
 
-Bring our library into your code or notebook by using the command ```from src.d2lapi import``` then type what directories / modules you'd like to use. 
+Bring our library into your code or notebook by using the command ```from src.d2lapi import``` then type what directories / modules you'd like to use. As a note, this may change depending on what folder you are working in!  
 
 The options are as follows:
 1. Final_Quiz: functions to convert quiz data, import using ```from src.d2lapi import Final_Quiz```

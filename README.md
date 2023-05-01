@@ -28,7 +28,7 @@ Here is a [link](https://mediaspace.msu.edu/media/MSUD2LInstructorAPI-CMSE495_Fi
 
 ## Navigate Our Repository
 
-The 'Reports' directory contains helpful resources for using our product. The instructions for installing Conda on different systems like Windows and MacOS can be found in this folder. It also contains the UsageRequirementsLimitations.md file which gives information on usage requirements and usage limitations. The INSTALL.md file also has important instructions for using our software.
+The 'Reports' directory contains our Final Repor, which will give detailed information about our project, as well as helpful resources for using our product. The instructions for installing Conda on different systems like Windows and MacOS can be found in this folder. It also contains the UsageRequirementsLimitations.md file which gives information on usage requirements and usage limitations. The INSTALL.md file also has important instructions for using our software.
 
 There are two different GUIs that can be used to interface with our software. The widget-based GUI can be accessed by navigating to src-> Widget-Based_GUI_WithLabelKeys.ipynb. The TKinter interface is contained in the 'TestGUI.py' file.
 
